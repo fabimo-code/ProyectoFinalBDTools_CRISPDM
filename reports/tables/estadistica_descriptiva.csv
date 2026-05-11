@@ -1,0 +1,12 @@
+﻿indicador,valor
+casos,17201.0
+variables,32.0
+victimas_total,18182.0
+victimas_media,1.057
+victimas_mediana,1.0
+victimas_desviacion,1.2522
+victimas_min,1.0
+victimas_max,150.0
+alto_impacto_proporcion,0.0229
+alto_impacto_ic95_inf,0.0207
+alto_impacto_ic95_sup,0.0251

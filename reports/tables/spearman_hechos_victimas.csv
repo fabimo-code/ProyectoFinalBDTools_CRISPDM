@@ -1,0 +1,9 @@
+﻿variable,hecho,rho,p_value,decision
+abandono_o_despojo_forzado_de_tierras,Abandono/Despojo,-0.005091,0.504343,sin_correlacion
+amenaza_o_intimidacion,Amenaza/Intimidación,0.091825,0.0,correlacion
+confinamiento_o_restriccion_a_la_movilidad,Confinamiento,0.013352,0.079931,sin_correlacion
+desplazamiento_forzado,Desplazamiento Forzado,0.054393,0.0,correlacion
+extorsion,Extorsión,-0.003089,0.685391,sin_correlacion
+lesionados_civiles,Lesionados Civiles,0.04261,0.0,correlacion
+pillaje,Pillaje,0.021991,0.003922,correlacion
+tortura,Tortura,0.004458,0.558784,sin_correlacion

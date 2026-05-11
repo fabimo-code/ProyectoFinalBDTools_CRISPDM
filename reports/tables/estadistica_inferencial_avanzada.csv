@@ -1,0 +1,6 @@
+﻿prueba,variable,estadistico,p_value,decision,efecto_r
+normalidad_dagostino_pearson,total_victimas_caso,68366.1245,0.0,no_normal,
+kruskal_responsable,presunto_responsable,72.5846,0.0,diferencias,
+mann_whitney_guerrilla_paramilitar,presunto_responsable,4001654.5,0.000443,diferencias,-0.0231
+kruskal_region,region,29.0483,0.000142,diferencias,
+spearman_total_hechos_victimas,total_hechos,0.1003,0.0,correlacion,

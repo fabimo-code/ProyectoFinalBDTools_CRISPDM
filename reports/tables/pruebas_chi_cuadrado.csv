@@ -1,0 +1,8 @@
+﻿variable,chi2,p_value,dof,cramers_v,decision
+departamento,107.3679,0.0,34,0.079,asociacion
+modalidad,228.826,0.0,4,0.1153,asociacion
+presunto_responsable,624.4256,0.0,10,0.1905,asociacion
+tipo_vinculacion,182.1583,0.0,4,0.1029,asociacion
+decada,688.8058,0.0,7,0.2001,asociacion
+forma_vinculacion,10622.9845,0.0,6,0.7859,asociacion
+region,149.1148,1e-06,75,0.0931,asociacion
