@@ -3,7 +3,7 @@ violencia_basada_en_genero,99.95,,eliminada,0
 otro_hecho_simultaneo,99.79,,eliminada,0
 id_caso_relacionado,97.85,,eliminada,0
 region,0.16,0.0,string,76
-codigo_dane_de_municipio,0.0,0.0,object,833
+codigo_dane_de_municipio,0.0,0.0,str,833
 confinamiento_o_restriccion_a_la_movilidad,0.0,0.0,int64,2
 departamento,0.0,0.0,string,35
 ataque_contra_mision_medica,0.0,0.0,int64,1
@@ -13,10 +13,10 @@ anio,0.0,0.0,float64,51
 extorsion,0.0,0.0,int64,2
 dia,0.0,0.0,int64,32
 desplazamiento_forzado,0.0,0.0,int64,2
-descripcion_presunto_responsable,0.0,0.0,object,33
+descripcion_presunto_responsable,0.0,0.0,str,33
 forma_vinculacion,0.0,0.0,string,7
 id_caso,0.0,0.0,float64,17201
-latitud_longitud,0.0,0.0,object,997
+latitud_longitud,0.0,0.0,str,997
 lesionados_civiles,0.0,0.0,int64,2
 pillaje,0.0,0.0,int64,5
 municipio,0.0,0.0,string,765
@@ -30,7 +30,7 @@ dia_valido,,69.57,Int64,31
 mes_valido,,67.31,Int64,12
 anio_valido,,64.97,Int64,50
 alto_impacto,,0.0,int64,2
-decada,,0.0,object,8
+decada,,0.0,str,8
 latitud,,0.0,float64,995
 longitud,,0.0,float64,995
 total_hechos,,0.0,int64,7

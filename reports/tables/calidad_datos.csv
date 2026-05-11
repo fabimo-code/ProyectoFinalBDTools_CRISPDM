@@ -1,7 +1,7 @@
 ﻿variable,tipo_limpio,nulos_raw_pct,nulos_limpio_pct,valores_unicos_limpio
-anio_valido,Int64,,100.0,0
 dia_valido,Int64,,69.57,31
 mes_valido,Int64,,67.31,12
+anio_valido,Int64,,64.97,50
 abandono_o_despojo_forzado_de_tierras,int64,0.0,0.0,2
 alto_impacto,int64,,0.0,2
 amenaza_o_intimidacion,int64,0.0,0.0,2
@@ -9,7 +9,7 @@ anio,float64,0.0,0.0,51
 ataque_contra_mision_medica,int64,0.0,0.0,1
 codigo_dane_de_municipio,str,0.0,0.0,833
 confinamiento_o_restriccion_a_la_movilidad,int64,0.0,0.0,2
-decada,str,,0.0,1
+decada,str,,0.0,8
 departamento,string,0.0,0.0,35
 descripcion_presunto_responsable,str,0.0,0.0,33
 desplazamiento_forzado,int64,0.0,0.0,2
