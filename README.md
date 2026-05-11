@@ -2,9 +2,9 @@
 
 ## Análisis del dataset SIEVCAC con metodología CRISP-DM
 
-Este proyecto corresponde al trabajo final de la asignatura **Big Data Tools**. El objetivo principal fue construir una solución reproducible en Python para analizar casos de reclutamiento y utilización de niños, niñas y adolescentes en el marco del conflicto armado colombiano, usando como base el dataset SIEVCAC.
+Este proyecto corresponde al trabajo final de la asignatura Big Data Tools. El objetivo principal fue construir una solución reproducible en Python para analizar casos de reclutamiento y utilización de niños, niñas y adolescentes en el marco del conflicto armado colombiano, usando como base el dataset SIEVCAC.
 
-El trabajo se organizó siguiendo la metodología **CRISP-DM**, con el fin de separar mejor las etapas del análisis y evitar que todo quedara concentrado en un solo notebook. Además, se modularizó la lógica principal en la carpeta `src/bdtools`, dejando el notebook como una guía de ejecución y presentación de resultados.
+El trabajo se organizó siguiendo la metodología CRISP-DM, con el fin de separar mejor las etapas del análisis y evitar que todo quedara concentrado en un solo notebook. Además, se modularizó la lógica principal en la carpeta src/bdtools, dejando el notebook como una guía de ejecución y presentación de resultados.
 
 ---
 
@@ -20,8 +20,6 @@ Desarrollar un flujo de análisis de datos que permita:
 - Orquestar el flujo completo con Prefect.
 - Dejar una estructura compatible con PostgreSQL/PostGIS, MongoDB y Docker.
 
-El proyecto no busca reemplazar el análisis social o jurídico del fenómeno. Se enfoca en el procesamiento técnico, exploración, modelado y despliegue básico de datos.
-
 ---
 
 ## Metodología usada
@@ -35,7 +33,7 @@ El desarrollo se organizó con base en CRISP-DM:
    Se revisaron dimensiones, tipos de datos, valores faltantes, duplicados y variables principales.
 
 3. **Preparación de los datos**  
-   Se limpiaron nombres de columnas, fechas, textos, coordenadas y valores nulos. También se creó la variable objetivo `alto_impacto`.
+   Se limpiaron nombres de columnas, fechas, textos, coordenadas y valores nulos. También se creó la variable objetivo alto_impacto.
 
 4. **Modelado**  
    Se entrenaron únicamente dos modelos:
@@ -183,20 +181,6 @@ pyarrow
 openpyxl
 ```
 
-Para instalar dependencias:
-
-```bash
-pip install -r requirements.txt
-```
-
-En Windows, si GeoPandas presenta problemas de instalación, se recomienda instalarlo con conda:
-
-```bash
-conda install -c conda-forge geopandas -y
-```
-
----
-
 ## Preparación inicial
 
 Antes de ejecutar el proyecto, ubicar el dataset original en:
@@ -208,22 +192,6 @@ data/raw/Caso_Conflicto_Armado.xlsx
 Si el archivo tiene otro nombre, el sistema intenta detectar automáticamente el primer archivo `.xlsx`, `.xls` o `.csv` disponible dentro de `data/raw`.
 
 ---
-
-## Ejecución desde el notebook
-
-Abrir:
-
-```text
-notebooks/Proyecto_Final.ipynb
-```
-
-Seleccionar el kernel:
-
-```text
-proyectofinalbdtools (Python 3.11.15)
-```
-
-Ejecutar las celdas en orden.
 
 El notebook está dividido en:
 
@@ -340,7 +308,7 @@ reports/tables/classification_report_random_forest.json
 
 ## Variable objetivo
 
-La variable `alto_impacto` se construyó a partir del número total de víctimas del caso.
+La variable alto_impacto se construyó a partir del número total de víctimas del caso.
 
 ```text
 alto_impacto = 1 si el caso registra más de una víctima
@@ -388,59 +356,3 @@ python scripts/check_setup.py
 Este script revisa que existan carpetas principales, archivos clave y que el paquete `bdtools` pueda importarse correctamente.
 
 ---
-
-## Estado final
-
-El proyecto queda con:
-
-- Notebook final ejecutable de arriba hacia abajo.
-- Código modular en `src/bdtools`.
-- Pipeline automatizado con Prefect.
-- Exportación de datos limpios, tablas y figuras.
-- Procesamiento geoespacial con GeoPandas.
-- Modelado con Regresión Logística y Random Forest.
-- Configuración para bases de datos con Docker, PostgreSQL/PostGIS y MongoDB.
-
----
-
-## Autor
-
-Proyecto desarrollado como entrega final de la asignatura **Big Data Tools**.
-
-Estudiante de Ingeniería Informática.
-
-## Actualización de EDA e inferencia avanzada
-
-Esta versión incluye una ampliación del análisis exploratorio tomado del notebook base de Colab. Además de las salidas principales, el proyecto genera visualizaciones adicionales para apoyar el informe:
-
-- Mapa de nulos del dataset limpio.
-- Porcentaje de nulos por variable.
-- Columnas eliminadas o candidatas por más de 90% de nulos.
-- Auditoría de nulos implícitos en año, mes y día.
-- Validación de estandarización de variables categóricas.
-- Resumen de coordenadas extraídas desde la columna de latitud-longitud.
-- Distribución por década, modalidad, tipo de vinculación, forma de vinculación, departamentos y regiones.
-- Paneles descriptivos, univariados, bivariados, temporales, geoespaciales y de outliers.
-- Estadística inferencial avanzada con normalidad, Kruskal-Wallis, Mann-Whitney, Spearman y bootstrap.
-
-Las figuras se guardan en:
-
-```text
-reports/figures/
-```
-
-Las tablas complementarias se guardan en:
-
-```text
-reports/tables/
-```
-
-Para regenerar todo:
-
-```bash
-conda activate proyectofinalbdtools
-python flows/pipeline.py
-```
-
-En el notebook `notebooks/Proyecto_Final.ipynb` se agregó una sección llamada **Visualizaciones ampliadas para informe**, donde se muestran las imágenes nuevas de forma automática si existen en la carpeta de reportes.
-
